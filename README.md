@@ -73,10 +73,18 @@ That is, in a song with key of E major, the chord **Dmaj7** can written as `b7ma
 Lines that start with a semicolon (`;`) followed by a space are considered a lyrics line.
 The lyrics text will be displayed on the screen.
 
-```
-;
-```
-
 ### Chord row
 
+Lines that are not directives and lyrics row are considered to be a row of chord blocks.
+Chords will appear as blocks.
+In general, each block corresponds to the same unit of musical time (usually a quarter note or a half note, depending on the song’s complexity).
+Each token in this line is separated by a space.
 
+- **`<chord>`** Adds a chord block to this row.
+  _Remember that chords is specified in terms of scale degree instead of absolute notes._
+  For example, `6m`.
+
+- **`/`** Adds a blank block to this row, indicating that the chord is unchanged.
+
+- **`bpm <BPM>`** Changes the song speed in blocks per minute.
+  This affects how the chordchart is synchronized with the YouTube video.
