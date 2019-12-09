@@ -1,0 +1,31 @@
+.chord-block {
+  width: 4em;
+  text-align: center;
+  background: #f0f0f0;
+  padding: 3px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  color: #a26;
+  appearance: none;
+  border: 0;
+}
+.chord-block.is-active {
+  background: #fac;
+}
+.chord-block:not(.is-empty) {
+  flex-shrink: 1;
+}
+.chord-block.is-empty {
+  opacity: 0.75;
+  flex-shrink: 2;
+}
+
+@media (min-width: 1000px) {
+  .video-player {
+    position: sticky;
+    right: 0;
+    top: 0;
+    float: right;
+  }
+}
