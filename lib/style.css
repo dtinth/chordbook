@@ -1,17 +1,17 @@
 .chord-block {
   width: 4em;
   text-align: center;
-  background: #f0f0f0;
+  background: hsl(var(--chord-hue),50%,90%);
   padding: 3px;
   margin-right: 3px;
   margin-bottom: 3px;
   border-radius: 3px;
-  color: #a26;
+  color: hsl(var(--chord-hue),80%,20%);
   appearance: none;
   border: 0;
 }
 .chord-block.is-active {
-  background: #fac;
+  background: hsl(var(--chord-hue),80%,80%);
 }
 .chord-block:not(.is-empty) {
   flex-shrink: 1;
