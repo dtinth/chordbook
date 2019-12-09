@@ -11,7 +11,8 @@
   border: 0;
 }
 .chord-block.is-active {
-  background: hsl(var(--chord-hue),80%,80%);
+  background: hsl(var(--chord-hue),75%,75%);
+  box-shadow: inset 0 0 3px hsl(var(--chord-hue),50%,50%);
 }
 .chord-block:not(.is-empty) {
   flex-shrink: 1;

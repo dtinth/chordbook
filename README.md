@@ -12,6 +12,7 @@ A simple interactive chordbook library web application.
 - Automatic scrolling (useful when playing in a band).
 - Supports transposing chords.
 - Optimized for fast transcription using a scale degree-based data format.
+- Chord blocks are colorized based on bass/root note, relative to tonic ().
 - Supports songs with speed and key changes. [Example](https://dtinth-chordbook.netlify.com/r9s1-021.html)
 
 ## Philosophy
