@@ -2,9 +2,23 @@
 
 A simple interactive chordbook library web application.
 
+## Features
+
+- Displays chords in block-based format (similar to [Chordify](https://chordify.net/)).
+- Displays both chords and lyrics.
+- Supports both mobile and desktop.
+- Embeds YouTube video and synchronizes the video playing position with the current chord.
+  Click on a chord block to seek the video to that chord.
+- Automatic scrolling (useful when playing in a band).
+- Supports transposing chords.
+- Optimized for fast transcription using a scale degree-based data format.
+- Supports songs with speed and key changes. [Example](https://dtinth-chordbook.netlify.com/r9s1-021.html)
+
 ## Philosophy
 
-- No build tools needed.
+- No build tools needed. Just save and refresh.
+- Can be edited locally without needing a web server.
+- Can access quickly. I can open the chordsheet by double-clicking the `.html` file.
 
 ## Creating a chordsheet
 
