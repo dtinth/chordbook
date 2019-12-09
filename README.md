@@ -68,10 +68,23 @@ That is, in a song with key of E major, the chord **Dmaj7** can written as `b7ma
 
 - **`title <Title>`** specifies the song title.
 
+### Section row
+
+Lines that have only one token that ends with a colon (`:`) denote a section.
+They can be used to separate different sections of a song from each other.
+
+```
+Chorus:
+```
+
 ### Lyrics row
 
 Lines that start with a semicolon (`;`) followed by a space are considered a lyrics line.
 The lyrics text will be displayed on the screen.
+
+```
+; ฉัน— ฉันนั้นโชคดีเหลือเกิน
+```
 
 ### Chord row
 
@@ -88,3 +101,10 @@ Each token in this line is separated by a space.
 
 - **`bpm <BPM>`** Changes the song speed in blocks per minute.
   This affects how the chordchart is synchronized with the YouTube video.
+
+```
+1sus4 / 1 / 3sus4 / 3 /
+6sus4 / 6m / 5m6 / 1 /
+4sus2 / / / 3m #5dim 6m 67
+2m 4m/b6 5sus4 5 1 1sus4 1 /
+```
