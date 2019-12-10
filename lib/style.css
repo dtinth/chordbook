@@ -22,13 +22,46 @@
   flex-shrink: 2;
 }
 
-.chord-block[data-interval='0'] { --chord-hue: 11; }
-.chord-block[data-interval='2'] { --chord-hue: 42; }
-.chord-block[data-interval='4'] { --chord-hue: 58; }
-.chord-block[data-interval='5'] { --chord-hue: 96; }
-.chord-block[data-interval='7'] { --chord-hue: 257; }
-.chord-block[data-interval='9'] { --chord-hue: 288; }
-.chord-block[data-interval='11'] { --chord-hue: 39; }
+.chord-block[data-interval='0'] { --chord-hue: 0; }
+.chord-block[data-interval='1'] { --chord-hue: 20; --chord-hue-from: 0; --chord-hue-to: 40; }
+.chord-block[data-interval='2'] { --chord-hue: 40; }
+.chord-block[data-interval='3'] { --chord-hue: 50; --chord-hue-from: 40; --chord-hue-to: 60; }
+.chord-block[data-interval='4'] { --chord-hue: 60; }
+.chord-block[data-interval='5'] { --chord-hue: 120; }
+.chord-block[data-interval='6'] { --chord-hue: 180; --chord-hue-from: 120; --chord-hue-to: 240; }
+.chord-block[data-interval='7'] { --chord-hue: 240; }
+.chord-block[data-interval='8'] { --chord-hue: 260; --chord-hue-from: 240; --chord-hue-to: 280; }
+.chord-block[data-interval='9'] { --chord-hue: 280; }
+.chord-block[data-interval='10'] { --chord-hue: 300; --chord-hue-from: 280; --chord-hue-to: 320; }
+.chord-block[data-interval='11'] { --chord-hue: 320; }
+
+.chord-block[data-interval='1'],
+.chord-block[data-interval='3'],
+.chord-block[data-interval='6'],
+.chord-block[data-interval='8'],
+.chord-block[data-interval='10'] {
+  background: repeating-linear-gradient(
+    -45deg,
+    hsl(var(--chord-hue-from),50%,90%),
+    hsl(var(--chord-hue-from),50%,90%) 10px,
+    hsl(var(--chord-hue-to),50%,90%) 10px,
+    hsl(var(--chord-hue-to),50%,90%) 20px
+  );
+}
+
+.chord-block[data-interval='1'].is-active,
+.chord-block[data-interval='3'].is-active,
+.chord-block[data-interval='6'].is-active,
+.chord-block[data-interval='8'].is-active,
+.chord-block[data-interval='10'].is-active {
+  background: repeating-linear-gradient(
+    -45deg,
+    hsl(var(--chord-hue-from),75%,75%),
+    hsl(var(--chord-hue-from),75%,75%) 10px,
+    hsl(var(--chord-hue-to),75%,75%) 10px,
+    hsl(var(--chord-hue-to),75%,75%) 20px
+  );
+}
 
 @media (min-width: 1000px) {
   .video-player {
