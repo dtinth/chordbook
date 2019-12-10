@@ -29,7 +29,8 @@ Create an HTML file with this template:
 
 ```html
 <!DOCTYPE html>
-<meta charset="utf-8" />
+<meta charset="utf-8">
+<base href="..">
 <script src="lib/entry.js"></script>
 <pre id="src">
 [CHORDSHEET DATA HERE]
