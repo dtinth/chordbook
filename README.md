@@ -2,6 +2,8 @@
 
 A simple interactive chordbook library web application.
 
+&rarr; [**View example**](https://dtinth-chordbook.netlify.com/everydayevermore.html)
+
 ## Features
 
 - Displays chords in block-based format (similar to [Chordify](https://chordify.net/)).
@@ -17,7 +19,7 @@ A simple interactive chordbook library web application.
 
 ## Development philosophy
 
-- No build tools needed. Just save and refresh.
+- No build tools needed. Just edit in text editor, save and refresh.
 - Can be edited and developed locally without needing any web server.
 - Can accessed quickly. I can open a chordsheet by double-clicking the `.html` file.
 
