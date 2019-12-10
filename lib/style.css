@@ -22,6 +22,14 @@
   flex-shrink: 2;
 }
 
+.chord-block[data-interval='0'] { --chord-hue: 11; }
+.chord-block[data-interval='2'] { --chord-hue: 42; }
+.chord-block[data-interval='4'] { --chord-hue: 58; }
+.chord-block[data-interval='5'] { --chord-hue: 96; }
+.chord-block[data-interval='7'] { --chord-hue: 257; }
+.chord-block[data-interval='9'] { --chord-hue: 288; }
+.chord-block[data-interval='11'] { --chord-hue: 39; }
+
 @media (min-width: 1000px) {
   .video-player {
     position: sticky;
