@@ -2,7 +2,7 @@
 
 A simple interactive chordbook library web application.
 
-&rarr; [**View example**](https://dtinth-chordbook.netlify.com/everydayevermore.html)
+&rarr; [**View example**](https://dtinth-chordbook.netlify.com/chords/everydayevermore.html)
 
 ## Features
 
