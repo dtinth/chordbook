@@ -15,11 +15,11 @@ A simple interactive chordbook library web application.
 - Chord blocks are colorized based on bass/root note, relative to tonic (similar to [Hooktheory](https://www.hooktheory.com/)’s color scheme).
 - Supports songs with speed and key changes. [Example](https://dtinth-chordbook.netlify.com/r9s1-021.html)
 
-## Philosophy
+## Development philosophy
 
 - No build tools needed. Just save and refresh.
-- Can be edited locally without needing a web server.
-- Can access quickly. I can open the chordsheet by double-clicking the `.html` file.
+- Can be edited and developed locally without needing any web server.
+- Can accessed quickly. I can open a chordsheet by double-clicking the `.html` file.
 
 ## Creating a chordsheet
 
