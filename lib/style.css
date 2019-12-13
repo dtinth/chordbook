@@ -1,12 +1,12 @@
 .chord-block {
-  width: 4em;
+  width: calc(4.5em * var(--size) - 3px);
   text-align: center;
   background: hsl(var(--chord-hue),50%,90%);
-  padding: 3px;
+  padding: 3px 6px;
   margin-right: 3px;
   margin-bottom: 3px;
   border-radius: 3px;
-  color: hsl(var(--chord-hue),80%,20%);
+  color: hsl(var(--chord-hue),90%,10%);
   appearance: none;
   border: 0;
 }
@@ -16,6 +16,7 @@
 }
 .chord-block:not(.is-empty) {
   flex-shrink: 1;
+  z-index: 1;
 }
 .chord-block.is-empty {
   opacity: 0.75;
@@ -23,9 +24,9 @@
 }
 
 .chord-block[data-interval='0'] { --chord-hue: 0; }
-.chord-block[data-interval='1'] { --chord-hue: 20; --chord-hue-from: 0; --chord-hue-to: 40; }
-.chord-block[data-interval='2'] { --chord-hue: 40; }
-.chord-block[data-interval='3'] { --chord-hue: 50; --chord-hue-from: 40; --chord-hue-to: 60; }
+.chord-block[data-interval='1'] { --chord-hue: 15; --chord-hue-from: 0; --chord-hue-to: 30; }
+.chord-block[data-interval='2'] { --chord-hue: 30; }
+.chord-block[data-interval='3'] { --chord-hue: 45; --chord-hue-from: 30; --chord-hue-to: 60; }
 .chord-block[data-interval='4'] { --chord-hue: 60; }
 .chord-block[data-interval='5'] { --chord-hue: 120; }
 .chord-block[data-interval='6'] { --chord-hue: 180; --chord-hue-from: 120; --chord-hue-to: 240; }
