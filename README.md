@@ -16,6 +16,7 @@ A simple interactive chordbook library web application.
 - Optimized for fast transcription using a scale degree-based data format.
 - Chord blocks are colorized based on bass/root note, relative to tonic (similar to [Hooktheory](https://www.hooktheory.com/theorytab/about)’s color scheme).
 - Supports songs with speed and key changes. [Example](https://dtinth-chordbook.netlify.com/r9s1-021.html)
+- Can hot reload the chordsheet by pressing <kbd>R</kbd> on the keyboard.
 
 ## Development philosophy
 
