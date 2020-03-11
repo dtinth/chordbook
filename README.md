@@ -4,6 +4,11 @@ A simple interactive chordbook library web application.
 
 &rarr; [**View example**](https://dtinth-chordbook.netlify.com/chords/everydayevermore.html)
 
+|                       |                                            |
+| --------------------- | ------------------------------------------ |
+| **Glitch project**    | https://glitch.com/~dtinth-chordbook       |
+| **GitHub repository** | https://github.com/dtinth/dtinth/chordbook |
+
 ## Features
 
 - Displays chords in block-based format (similar to [Chordify](https://chordify.net/)).
@@ -30,8 +35,8 @@ Create an HTML file with this template:
 
 ```html
 <!DOCTYPE html>
-<meta charset="utf-8">
-<base href="..">
+<meta charset="utf-8" />
+<base href=".." />
 <script src="lib/entry.js"></script>
 <pre id="src">
 [CHORDSHEET DATA HERE]
@@ -49,14 +54,14 @@ That is, instead of using an absolute note names, we use numbers representing th
 
 For example, in a song with the key of C major, these diatonic chords can be represented as scale degrees as follows:
 
-| C | Dm | Em | F | G | Am | Bdim |
-| --- | --- | --- | --- | --- | --- | --- |
+| C   | Dm   | Em   | F   | G   | Am   | Bdim   |
+| --- | ---- | ---- | --- | --- | ---- | ------ |
 | `1` | `2m` | `3m` | `4` | `5` | `6m` | `7dim` |
 
 Another example: in a song with the key of E major, these diatonic chords can be represented as scale degrees as follows:
 
-| E | F#m | G#m | A | B | C#m | D#dim |
-| --- | --- | --- | --- | --- | --- | --- |
+| E   | F#m  | G#m  | A   | B   | C#m  | D#dim  |
+| --- | ---- | ---- | --- | --- | ---- | ------ |
 | `1` | `2m` | `3m` | `4` | `5` | `6m` | `7dim` |
 
 You can see that we use the same symbol for each chord having the same scale degree, regardless of the key it is in.
