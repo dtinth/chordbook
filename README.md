@@ -4,10 +4,10 @@ A simple interactive chordbook library web application.
 
 &rarr; [**View example**](https://dtinth-chordbook.netlify.com/chords/everydayevermore.html)
 
-|                       |                                            |
-| --------------------- | ------------------------------------------ |
-| **Glitch project**    | https://glitch.com/~dtinth-chordbook       |
-| **GitHub repository** | https://github.com/dtinth/dtinth/chordbook |
+|                       |                                      |
+| --------------------- | ------------------------------------ |
+| **Glitch project**    | https://glitch.com/~dtinth-chordbook |
+| **GitHub repository** | https://github.com/dtinth/chordbook  |
 
 ## Features
 
