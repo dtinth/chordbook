@@ -49,7 +49,8 @@ A chordsheet is a simple line-based text file format.
 Each line can either be a directive or a row that appears in the formatted chordsheet.
 
 For ease of transcribing,
-the chords are expressed in terms of **scale degree**.
+the chords are expressed in terms of **scale degree**,
+using the [Nashville Number System](https://en.wikipedia.org/wiki/Nashville_Number_System).
 That is, instead of using an absolute note names, we use numbers representing the scale degree instead.
 
 For example, in a song with the key of C major, these diatonic chords can be represented as scale degrees as follows:
