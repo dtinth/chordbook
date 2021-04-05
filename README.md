@@ -18,7 +18,7 @@ A simple interactive chordbook library web application.
   Click on a chord block to seek the video to that chord.
 - Automatic scrolling (useful when playing in a band).
 - Supports transposing chords.
-- Optimized for fast transcription using a scale degree-based data format.
+- Optimized for fast transcription using a data format based on [Nashville Number System](https://en.wikipedia.org/wiki/Nashville_Number_System).
 - Chord blocks are colorized based on bass/root note, relative to tonic (similar to [Hooktheory](https://www.hooktheory.com/theorytab/about)’s color scheme).
 - Supports songs with speed and key changes. [Example](https://dtinth-chordbook.netlify.com/r9s1-021.html)
 - Can hot reload the chordsheet by pressing <kbd>R</kbd> on the keyboard.
