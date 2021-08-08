@@ -17,3 +17,7 @@ A simple interactive chordbook library web application.
 - Works with songs with speed and key changes. https://dtinth-chordbook.netlify.com/r9s1-021.html[Example]
 - Can hot reload the chordsheet by pressing kbd:[R] on the keyboard.
 
+== Screenshot
+
+[link="https://dtinth-chordbook.netlify.app/chords/everydayevermore.html"]
+image::https://github.com/dtinth/timelapse/blob/master/projects/chordbook_everydayevermore.png?raw=true[]
