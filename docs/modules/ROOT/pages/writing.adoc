@@ -1,0 +1,192 @@
+= Creating a chordsheet
+:experimental:
+
+Create an HTML file with this initial code:
+
+[source,html]
+----
+<!DOCTYPE html>
+<meta charset="utf-8">
+<base href="https://dtinth-chordbook.netlify.app/">
+<script src="lib/entry.js"></script>
+<pre id="src">
+<1>
+</pre>
+----
+<1> Add chordsheet data here.
+
+[#example]
+== An example chordsheet
+
+Here is an example of a chordsheet file.
+
+[source,html]
+----
+<!DOCTYPE html>
+<meta charset="utf-8">
+<base href="https://dtinth-chordbook.netlify.app/">
+<script src="lib/entry.js"></script>
+<pre id="src">
+title ความจริงเป็นสิ่งที่ตาย - ETC. <1>
+scale C
+youtube tur2qhg-cR4
+offset 75.18
+bpm 72
+
+Intro: <2>
+1 / 6m / 4 / / / <3>
+1/3 / 6m *3/4 / *5/4 b7 *1 / 4/6 /
+5 / / /
+
+Verse:
+1 / 6m / 2m / 5 /
+1 / 6m / 2m / 7dim 3
+6m / 5 / 4 / 1/3 /
+2m / / / 5 / *3/4 4m/b6 *2/4 1/5 *3/4 5m
+; คล้ายกับฉันลืมตาพึ่งตื่น ยังไม่แน่ใจ <4>
+; เรื่องในฝันเป็นจริงหรือไม่ ยังคงสับสน
+; ให้ทำยังไง ในใจก็ยังวกวน
+; มันก็เหมือนเรื่องเธอกับฉัน
+</pre>
+----
+<1> This is a xref:#directive[directive line].
+<2> This is a xref:#section[section marker line].
+<3> This is a xref:#harmony[harmony line].
+<4> This is a xref:#lyric[lyric line].
+
+A chordsheet is generated:
+
+[link="https://dtinth.github.io/chordbook-drafts/tur2qhg-cR4.html"]
+image::https://github.com/dtinth/timelapse/blob/master/projects/chordbook_etc.png?raw=true[]
+
+== Previewing the chordsheet
+
+You can double-click the HTML file to open the chordsheet in your web browser.
+No web server is required.
+
+=== Verifying if the chords are correct
+
+When you hover a chord book while holding the kbd:[Alt] key, the chord will be played. Then use your ears to judge whether the chord is correct.
+
+=== Reloading the chordsheet
+
+You can *hot-reload* the chordsheet by pressing the kbd:[R] key. This has advantage over reloading the page because the song playback and the scrolling position is preserved.
+
+[#directive]
+== Directives
+
+`title <Title>`::
+Specifies the song title and artist. This will be shown as the page title.
+`scale <Note>`::
+Declares the scale to be used.
+This affects the chords written after it.
+It may be used multiple times in case the song contains key changes.
+`youtube <Id>`::
+Specifies the YouTube video ID.
+A YouTube embed will appear at the top right corner of the screen, and the chords will be synchronized with the video.
+`offset <Seconds>`::
+Specifies the time from the start of the video, at which the the first chord begins.
+`bpm <BPM>`::
+Specifies the beats per minute.
+It may be used multiple times in case the song contains tempo changes.
+
+[#section]
+== Section marker lines
+Lines that have only one token that ends with a colon (`:`) denote a section.
+They can be used to separate different sections of a song from each other.
+
+[source]
+.Example: A chorus section
+----
+Chorus:
+----
+
+[#lyric]
+== Lyric lines
+
+Lines that start with a semicolon (`;`) followed by a space are considered a lyrics line.
+The lyrics text will be displayed on the screen.
+
+[source]
+.Example: A lyric line
+----
+; ฉัน— ฉันนั้นโชคดีเหลือเกิน
+----
+
+[#harmony]
+== Harmony lines
+
+A harmony line specifies a list of chords to be displayed.
+Chords will appear as blocks.
+In general, each block corresponds to the same unit of musical time (usually a quarter note or a half note, depending on the song’s complexity).
+Each token in this line is separated by a space.
+
+[source]
+.Example: A harmony line
+----
+1/3 / 6m *3/4 / *5/4 b7 *1 / 4/6 /
+----
+
+The above example renders the following line:
+
+.The harmony line when rendered
+image::harmony-line.png[| C/E | - | Am | - | Bb | - | F/A | - |]
+
+As you can see, there are 2 main types of tokens:
+
+A xref:#chord-token[chord token]::
+It will add a chord block to the harmony line. It looks like this: `1/3` or `b6maj7/b3`
+A xref:#timing-token[timing token]::
+It will adjust the duration of the following chord blocks. It starts with `*`, and it looks like this: `*3/4` or `*1`
+
+[#chord-token]
+=== Chord tokens
+
+A chord token contains:
+
+. A xref:#scale-degree[scale degree], such as `2`, `5`, `1`, `b7`.
+. An optional chord quality, such as `maj`, `min`, `aug`, `dim`.
+. Optional chord extensions, such as `7b5add11`
+. An optional bass scale degree, such as `/#4`
+
+==== Repeating chord
+
+There is a special chord token `/` which means that the previous chord will be repeated. When rendered, it appears as a blank block with no text inside.
+
+[#scale-degree]
+==== Specifying scale degrees
+
+For ease of transcribing, the chords are expressed in terms of *scale degrees*,
+using the https://en.wikipedia.org/wiki/Nashville_Number_System[Nashville Number System].
+That is, instead of using an absolute note names, we use numbers representing the scale degree instead.
+
+For example, in a song with the key of C major, these diatonic chords can be represented as scale degrees as follows:
+
+[cols="1,1,1,1,1,1,1"]
+.The C major scale and their scale degrees
+|===
+|C   | Dm   | Em   | F   | G   | Am   | Bdim
+
+|`1` | `2m` | `3m` | `4` | `5` | `6m` | `7dim`
+|===
+
+Another example: in a song with the key of E major, these diatonic chords can be represented as scale degrees as follows:
+
+[cols="1,1,1,1,1,1,1"]
+.The E major scale and their scale degrees
+|===
+| E   | F#m  | G#m  | A   | B   | C#m  | D#dim
+
+| `1` | `2m` | `3m` | `4` | `5` | `6m` | `7dim`
+|===
+
+You can see that we use the same symbol for each chord that has the same scale degree, regardless of the key it is in.
+
+Accidentals can be added **before** the number.
+That is, in a song with key of E major, the chord **Dmaj7** can written as `b7maj7`.
+
+[#timing-token]
+=== Timing tokens
+
+A timing token starts with `*`, followed by a fractional number.
+This will specify the size of the following chord blocks, up until the next timing token or the end of the line.

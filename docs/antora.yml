@@ -1,0 +1,5 @@
+name: chordbook
+version: master
+title: 'dtinth’s interactive chordbook'
+nav:
+  - modules/ROOT/nav.adoc

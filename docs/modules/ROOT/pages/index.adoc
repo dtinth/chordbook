@@ -1,0 +1,19 @@
+= dtinth’s interactive chordbook
+:experimental:
+
+A simple interactive chordbook library web application.
+
+== Features
+
+- Displays chords in block-based format (similar to https://chordify.net/[Chordify]).
+- Displays both chords and lyrics.
+- Supports both mobile and desktop.
+- Embeds YouTube video and synchronizes the video playing position with the current chord.
+  Click on a chord block to seek the video to that chord.
+- Automatic scrolling (useful when playing in a band).
+- Chords can be transposed.
+- Optimized for fast transcription using a data format based on https://en.wikipedia.org/wiki/Nashville_Number_System[Nashville Number System].
+- Chord blocks are colorized based on the bass/root note, relative to the tonic (similar to https://www.hooktheory.com/theorytab/about[Hooktheory]’s color scheme).
+- Works with songs with speed and key changes. https://dtinth-chordbook.netlify.com/r9s1-021.html[Example]
+- Can hot reload the chordsheet by pressing kbd:[R] on the keyboard.
+

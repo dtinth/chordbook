@@ -1,0 +1,5 @@
+= Development philosophy
+
+* No build tools needed. Just edit in text editor, save and refresh.
+* Can be edited and developed locally without needing any web server.
+* Can accessed quickly. I can open a chordsheet by double-clicking the `.html` file.
